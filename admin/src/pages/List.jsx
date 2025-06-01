@@ -25,21 +25,22 @@ const List = ({ token }) => {
   }
 
   const removeProduct = async (id) => {
-    try {
+    // try {
 
-      const response = await axios.post(backendUrl + '/api/product/remove', { id }, { headers: { token } })
+    //   const response = await axios.post(backendUrl + '/api/product/remove', { id }, { headers: { token } })
 
-      if (response.data.success) {
-        toast.success(response.data.message)
-        await fetchList();
-      } else {
-        toast.error(response.data.message)
-      }
+    //   if (response.data.success) {
+    //     toast.success(response.data.message)
+    //     await fetchList();
+    //   } else {
+    //     toast.error(response.data.message)
+    //   }
 
-    } catch (error) {
-      console.log(error)
-      toast.error(error.message)
-    }
+    // } catch (error) {
+    //   console.log(error)
+      
+    // }
+    toast.error("Deletion Disabled for Safety");
   }
 
   useEffect(() => {
